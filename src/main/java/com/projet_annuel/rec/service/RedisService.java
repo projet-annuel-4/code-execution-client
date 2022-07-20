@@ -20,4 +20,8 @@ public class RedisService {
     public Object getById(final String hashKey, final String key){
         return this.valueOps.get(hashKey, key);
     }
+
+    public void deleteById(final String hashKey, final String key){
+        this.valueOps.delete(hashKey, key);
+    }
 }

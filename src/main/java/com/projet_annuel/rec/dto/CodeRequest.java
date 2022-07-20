@@ -12,19 +12,30 @@ import java.util.ArrayList;
 @AllArgsConstructor
 public class CodeRequest implements Serializable {
 
+    private Long id;
     private String code;
     private String language;
-    private ArrayList<String> input;
     private CompilationMode mode;
+    private boolean test;
 
     public CodeRequest(String code) {
         this.code = code;
     }
 
-    public CodeRequest(String code, String language, ArrayList<String> input) {
-        this.code = code;
-        this.language = language;
-        this.input = input;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public boolean isTest() {
+        return test;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public CompilationMode getMode() {
+        return mode;
     }
 
     public String getCode() {
@@ -35,7 +46,4 @@ public class CodeRequest implements Serializable {
         return language;
     }
 
-    public ArrayList<String> getInput() {
-        return input;
-    }
 }

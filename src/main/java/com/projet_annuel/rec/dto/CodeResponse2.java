@@ -6,8 +6,6 @@ import org.springframework.data.redis.core.RedisHash;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
-
 public class CodeResponse2 {
 
     final private String id;
