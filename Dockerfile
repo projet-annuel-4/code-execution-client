@@ -29,7 +29,5 @@ COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 
 #execute the application
-ENTRYPOINT ["java","-cp","app:app/lib/*","RecApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","com/projet_annuel/rec/RecApplication"]
 
-# docker build -t remote-exec-client .  */
-# docker run -d -p 3001:3001 --name producer remote-exec-client */
