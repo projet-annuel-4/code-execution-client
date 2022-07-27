@@ -1,0 +1,13 @@
+server:
+  port: 3001
+hostname: localhost:3001
+spring:
+  application:
+    name: remote-code-execution-client-service
+  cloud:
+    config:
+      import-check:
+        enabled: false
+  rabbitmq:
+    host: host.docker.internal
+    port: 6379
