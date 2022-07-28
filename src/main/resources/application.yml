@@ -16,7 +16,9 @@ spring:
     host:  ${RABBITMQ_URL}
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
-
+  redis:
+    host: ${REDDIS_URL:host.docker.internal}
+    port: ${REDDIS_PORT:6379}
 jwt:
   header: Authorization
   secret:  ${JWT_SECRET}
